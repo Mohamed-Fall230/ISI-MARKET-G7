@@ -1,0 +1,46 @@
+ fait un formulaire de dépôt d'annonce avec les champs suivants :
+Champ titre (obligatoire)
+Champ description
+Select catégorie
+Champ prix (number)
+Select état (Neuf / Bon état / Usagé)
+Champ nom du vendeur
+Champ contact
+Bouton soumettre
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Déposer une annonce</title>
+</head>
+<body>
+    <h1>Déposer une annonce</h1>
+    <form action="/submit-annonce" method="POST">
+        <label for="title">Titre (obligatoire):</label><br>
+        <input type="text" id="title" name="title" required><br><br> 
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description"></textarea><br><br>
+        <label for="category">Catégorie:</label><br>
+        <select id="category" name="category">
+            <option value="livres">Livres</option>
+            <option value="materiel">Matériel</option>
+            <option value="services">Services</option>
+            <option value="autres">Autres</option>
+        </select><br><br>
+        <label for="price">Prix:</label><br>
+        <input type="number" id="price" name="price"><br><br>
+        <label for="condition">État:</label><br>
+        <select id="condition" name="condition">
+            <option value="neuf">Neuf</option>
+            <option value="bon_etat">Bon état</option>
+            <option value="usage">Usagé</option>
+        </select><br><br>
+        <label for="seller_name">Nom du vendeur:</label><br>
+        <input type="text" id="seller_name" name="seller_name"><br><br>
+        <label for="contact">Contact:</label><br>
+        <input type="text" id="contact" name="contact"><br><br>
+        <button type="submit">Soumettre</button>
+    </form>
+</body>
+</html>

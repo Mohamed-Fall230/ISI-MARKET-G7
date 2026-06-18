@@ -1,0 +1,41 @@
+#fait la page d'accueil avec une barre de navigation, une barre de recherche ,des boutons de filtre par catégorie (Livres, Matériel, Services, Autres), un filtre par prix (min/max), une zone où s'afficheront les cartes d'annonces, un compteur d'annonces ,un bouton "Déposer une annonce", pas de css nécessaire
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Annonces</title>
+</head>
+<body>
+    <nav>
+        <h1>Bienvenue sur notre site d'annonces</h1>
+        <input type="text" placeholder="Rechercher...">
+        <button>Rechercher</button>
+        <button>Déposer une annonce</button>
+    </nav>
+    <section>
+        <h2>Filtres</h2>
+        <div>
+            <h3>Catégorie</h3>
+            <button>Livres</button> 
+            <button>Matériel</button>
+            <button>Services</button>
+            <button>Autres</button>
+        </div>
+        <div>
+            <h3>Prix</h3>
+            <label for="min_price">Min:</label>
+            <input type="number" id="min_price" name="min_price">
+            <label for="max_price">Max:</label>
+            <input type="number" id="max_price" name="max_price">
+        </div>
+    </section>
+    <section>
+        <h2>Annonces</h2>
+        <p>Nombre d'annonces: 0</p>
+        <div id="annonces">
+            <!-- Les cartes d'annonces s'afficheront ici -->
+        </div>
+    </section>
+</body>
+</html> 
